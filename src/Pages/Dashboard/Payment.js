@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L1GYYKoLIjwSiBUp981FYI36wwB6fAW3bqkj
 const Payment = () => {
     const { id } = useParams();
     console.log(id)
-    const url = `http://localhost:5000/booking/${id}`;
+    const url = `https://doctors-portal-server-k6o1.onrender.com/booking/${id}`;
 
     const { data: appointment, isLoading } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',
